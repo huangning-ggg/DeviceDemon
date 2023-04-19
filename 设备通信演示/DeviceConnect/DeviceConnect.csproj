@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62A59374-7526-4BD3-8956-FF9AAC1F70E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeviceConnect</RootNamespace>
+    <AssemblyName>DeviceConnect</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\ConnectBase.cs" />
+    <Compile Include="Instrument\TEC温控\TEC.cs" />
+    <Compile Include="Instrument\光功率计\PSS_OPM_4.cs" />
+    <Compile Include="Instrument\光功率计\PSS_OPM_S.cs" />
+    <Compile Include="Instrument\光功率计\ZEWDA_OPM.cs" />
+    <Compile Include="Instrument\光功率计\ZEWDA_OPM_4.cs" />
+    <Compile Include="Instrument\光开关\PSS_OPS1X401.cs" />
+    <Compile Include="Instrument\光源\IOPS.cs" />
+    <Compile Include="Instrument\光源\OPS_CWDM4.cs" />
+    <Compile Include="Instrument\光源\OpticalSource_CWDM4.cs" />
+    <Compile Include="Instrument\光源\PSS_AOS.cs" />
+    <Compile Include="Instrument\光源\PSS_DOA_14041.cs" />
+    <Compile Include="Instrument\扫码枪\Scanner.cs" />
+    <Compile Include="Instrument\扫码枪\Xenon.cs" />
+    <Compile Include="Instrument\烤箱\HTOven.cs" />
+    <Compile Include="Instrument\烤箱\iTT5166.cs" />
+    <Compile Include="Instrument\烤箱\TT5166_TCP.cs" />
+    <Compile Include="Instrument\烤箱\TT5166_Port.cs" />
+    <Compile Include="Instrument\电源\GPD_X303S.cs" />
+    <Compile Include="Instrument\运动控制卡\Dmc1000.cs" />
+    <Compile Include="Instrument\运动控制卡\DMC1000B.cs" />
+    <Compile Include="SerialPort\PortDriverTemp.cs" />
+    <Compile Include="TCP\TCPClientHelper.cs" />
+    <Compile Include="TCP\TCPDriverTemp.cs" />
+    <Compile Include="TCP\TCPHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialPort\SerialPortHelper.cs" />
+    <Compile Include="Visa32\DriverTemp\GPIBDriverTemp.cs" />
+    <Compile Include="Visa32\DriverTemp\RS232DriverTemp.cs" />
+    <Compile Include="Visa32\DriverTemp\TCPIPDriverTemp.cs" />
+    <Compile Include="Visa32\DriverTemp\USBDriverTemp.cs" />
+    <Compile Include="Visa32\Interface\GPIB_VISA32.cs" />
+    <Compile Include="Visa32\Interface\LAN_VISA32.cs" />
+    <Compile Include="Visa32\Interface\PortEventArgs.cs" />
+    <Compile Include="Visa32\Interface\PortOperator.cs" />
+    <Compile Include="Visa32\Interface\PortOperatorBase.cs" />
+    <Compile Include="Visa32\Interface\RS232_VISA32.cs" />
+    <Compile Include="Visa32\Interface\USB_VISA32.cs" />
+    <Compile Include="Visa32\Interface\VISA32.cs" />
+    <Compile Include="Visa32\Ulitity\PortUlitity.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
